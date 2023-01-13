@@ -51,27 +51,23 @@
       :continuous="true"
       :interval="interval"
       :show-arrows="true"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
+      
       height="400"
     >
+    <!--hide-delimiter-background
+      delimiter-icon="mdi-minus"-->
       <v-carousel-item
         v-for="(slide, i) in slides"
         :key="i"
-        :style="{color: activeColor}"
+        :src="slide.src"
       >
       {{slide.urlImg}}
-        <!--<v-sheet
-          :color="colors[i]"
-          height="100%"
-          tile
-        > :src="slide.src"-->
+   
 
-        <v-row>
-          <v-btn @click="setRedirect(slide.urlLink)">Ir para o projeto</v-btn>
-        </v-row>
+          <v-row>
+            <v-btn @click="setRedirect(slide.urlLink)">Ir para o projeto</v-btn>
+          </v-row>
           
-        <!--</v-sheet>-->
       </v-carousel-item>
     </v-carousel>
     <!--<v-list two-line>
@@ -107,22 +103,17 @@ export default {
         slides: [
           {
             nome: 'Seguro Residencial',
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-            urlImg: './assets/img/PortalResidencial.PNG',
+            src: 'https://testeportfolio.vercel.app/images/PortalResidencial.PNG',
             urlLink: 'http://150.136.201.214/PortalResidencial/#/'
           }, 
           {
             nome: 'Seguro Vida',
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-            urlImg: './assets/img/PortalResidencial.PNG',
-            //'PortalVarejo',
+            src: 'https://testeportfolio.vercel.app/images/PortalVarejo.PNG',
             urlLink: 'http://150.136.201.214/PortalVarejo/#/'
           },
           {
             nome: 'Seguro Vida Coletiva',
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-            urlImg: './assets/img/PortalResidencial.PNG',
-            //'PortalVidaColetiva',
+            src: 'https://testeportfolio.vercel.app/images/PortalVidaColetiva.PNG',
             urlLink: 'http://150.136.201.214/PortalVidaColetiva/#/'
           }
         ],
