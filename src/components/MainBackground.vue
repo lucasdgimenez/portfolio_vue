@@ -5,7 +5,7 @@
       <nav class="menu_main">
         <ul class="first">
           <li><a href="#port" @click="teste">Portfolio</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="https://wa.me/5511985974862">Contato</a></li>
         
         </ul>
         <ul class="second">
