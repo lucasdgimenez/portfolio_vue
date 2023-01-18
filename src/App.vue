@@ -46,12 +46,13 @@
       class="mx-auto portfolio"
     >
     <!--<v-system-bar lights-out></v-system-bar>-->
+    <h1 style="color: #00448B;">Portfolio</h1>
     <v-carousel
       cycle
       :continuous="true"
       :interval="interval"
       :show-arrows="true"
-      
+      style="cursor: pointer;"
       height="400"
     >
     <!--hide-delimiter-background
@@ -62,7 +63,10 @@
         :src="slide.src"
         @click="setModal(slide)"
       >
-      {{slide.urlImg}}
+        <div class="box">
+            {{slide.urlImg}}      
+        </div>
+      
           
       </v-carousel-item>
     </v-carousel>
@@ -142,7 +146,7 @@ export default {
         slides: [
           {
             nome: 'Seguro Residencial',
-            description: 'Compra de seguro residencial',
+            description: 'Ecommerce para compra de seguro residencial com opções para casa, apartamento e condominio tanto para uso habitual como veraneio (férias). Pacotes que variam desde o básico que cobre Incêndio, Danos Elétricos, Perda ou Pagamento de Aluguel, roubo e etc até o plano amplicado que possui ruptura de Tubulação, alagamento e inundação. LMG que varia de R$ 250.000,00 até R$ 2.500.000,00. Cotação que varia entre R$ 647,95 a R$ 8.130,73, podendo parcelar em até 6x.',
             src: 'https://testeportfolio.vercel.app/images/PortalResidencial.PNG',
             urlLink: 'http://150.136.201.214/PortalResidencial/#/'
           }, 
@@ -154,7 +158,7 @@ export default {
           },
           {
             nome: 'Seguro Vida Coletiva',
-            description: 'Gerador de pdf de apolice ',
+            description: 'Gerador de certificado e apolice no formtato PDF da aquisições de seguros feitas pelos corretores da Ezze. O certificado pode ser gerado de forma individual ou em lotes. É possível selecionar o sub e as faturas.',
             src: 'https://testeportfolio.vercel.app/images/PortalVidaColetiva.PNG',
             urlLink: 'http://150.136.201.214/PortalVidaColetiva/#/'
           }
@@ -194,7 +198,28 @@ li {
   list-style: none;
 }
 
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+
 .portfolio {
   width: 70%;
+}
+
+.box {
+  transition: box-shadow .3s;
+  margin: 50px;
+  border-radius:10px;
+  border: 1px solid #ccc;
+}
+
+.box:hover {
+  background: #eee;
+  box-shadow: 0 8px 8px -4px;
+}
+
+.titleProject {
+  margin-top: -50px;
 }
 </style>

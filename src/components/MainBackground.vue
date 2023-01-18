@@ -62,7 +62,7 @@ export default {
 
 .menu_main a {
   color: white;
-  background-color: #0168ba;
+  background-color: #00448B;
   padding: 15px;
 }
 
