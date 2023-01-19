@@ -152,9 +152,9 @@ export default {
           }, 
           {
             nome: 'Seguro Vida',
-            description: 'Compra de seguro de vida',
+            description: 'Ecommerce para compra de seguro de vida individual. O projeto calcula a cotação do seguro baseado na profissão do segurado, valor de indenização para morte, morte acidental e invalidez permanente, fora as opções de assistencia. É possível adicionar beneficiarios e é necessário preencher um formulário sobre a saúde do segurado.O link do projeto não está disponivel, apenas o vídeo de demonstração.',
             src: 'https://testeportfolio.vercel.app/images/PortalVarejo.PNG',
-            urlLink: 'http://150.136.201.214/PortalVarejo/#/'
+            urlLink: 'https://www.loom.com/share/57ccfa18732c49eb8847763d61935b9a'
           },
           {
             nome: 'Seguro Vida Coletiva',
@@ -167,7 +167,12 @@ export default {
     },
     methods: {
       setRedirect(link) {
-        window.open(link+this.token, '_blank');
+        if(link === "https://www.loom.com/share/57ccfa18732c49eb8847763d61935b9a") {
+          window.open(link, '_blank');
+        } else {
+          window.open(link+this.token, '_blank');
+        }
+        
       },
       setModal(project) {
         
